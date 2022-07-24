@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 
 public class SauceLabs {
@@ -29,7 +30,7 @@ public class SauceLabs {
         driver.get("https://www.saucedemo.com");
         Assert.assertEquals("Swag Labs", driver.getTitle());
 
-        driver.close();
+        driver.quit();
     }
 
     @Test
@@ -42,7 +43,7 @@ public class SauceLabs {
         driver.get("https://www.saucedemo.com");
         Assert.assertEquals("Swag Labs", driver.getTitle());
 
-        driver.close();
+        driver.quit();
     }
 
     @Test
@@ -55,6 +56,6 @@ public class SauceLabs {
         driver.get("https://www.saucedemo.com");
         Assert.assertEquals("Swag Labs", driver.getTitle());
 
-        driver.close();
+        driver.quit();
     }
 }
